@@ -1,7 +1,11 @@
 package com.oreilly.demo.json;
 
 public class Greeting {
-    private final String message;
+    private String message;
+
+    public Greeting() {
+
+    }
 
     public Greeting(String message) {
         this.message = message;
