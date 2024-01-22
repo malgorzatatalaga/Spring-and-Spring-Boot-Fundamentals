@@ -33,9 +33,9 @@ class SpringAndSpringBootFundamentalsApplicationTests {
     }
 
     @Test
-    void allBeansAreSigletons() {
-        Greeting greeting1 = applicationContext.getBean(Greeting.class);
-        Greeting greeting2 = applicationContext.getBean(Greeting.class);
+    void allBeansAreSigletons() { //by default
+        Greeting greeting1 = applicationContext.getBean("defaultGreeting", Greeting.class);
+        Greeting greeting2 = applicationContext.getBean("defaultGreeting", Greeting.class);
         assertSame(greeting1, greeting2);
     }
 
